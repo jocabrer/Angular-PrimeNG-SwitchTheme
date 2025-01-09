@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, computed, inject, signal } from '@angular/core';
+import { ThemeService } from './Services/theme.service';
+import { SidebarComponent } from "./sidebar/sidebar.component";
 
+/**
+ * The main component of the application
+ */
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [SidebarComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Angular-PrimeNG-Themes';
+
+	theme = inject(ThemeService);
+
+
+
+
 }

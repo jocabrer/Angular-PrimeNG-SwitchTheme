@@ -1,10 +1,14 @@
-Sidebar
-
 <p-drawer [(visible)]="visible" header="Drawer">
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat.
-    </p>
+    <div class="flex align-items-center justify-content-between gap-3 mb-3">
+		<button (click)="themes.switchTheme();"
+				pTooltip="Arya blue"
+				class="bg-transparent border-1 cursor-pointer p-2 w-3 flex align-items-center justify-content-center transition-all transition-duration-200 hover:border-500 surface-border"
+				style="border-radius: 30px;"
+				>a
+				<span class="block h-1rem w-full" style="border-radius: 30px; background: linear-gradient(180deg, #121212 0%, #2a2a2a 100%);" >
+
+		</span>
+	</button>
+	</div>
 </p-drawer>
 <p-button (click)="visible = true" icon="pi pi-arrow-right" />

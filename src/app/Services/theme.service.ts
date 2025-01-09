@@ -1,5 +1,7 @@
-import { computed, Inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Inject, Injectable, signal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { PrimeNG } from 'primeng/config';
+import Material from '@primeng/themes/material';
 
 /**
  * Service to switch the theme of the application
@@ -9,7 +11,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ThemeService {
 
-
+	primeng = inject( PrimeNG );
 	private _themeName = signal<string>( '' );
 	public themeName =  computed( () => this._themeName() );
 
@@ -23,14 +25,14 @@ export class ThemeService {
      * Switch the theme of the application
      * @param theme Theme to switch to
      */
-    switchTheme(theme: string) {
-        let themeLink = this.document.getElementById(
-            'app-theme'
-        ) as HTMLLinkElement;
-
-        if (themeLink) {
-            themeLink.href = theme + '.css';
-        }
+    switchTheme() {
+        this.primeng.setThemeConfig(
+            {
+                theme: {
+                    preset: Material,
+                }
+            }
+        );
     }
 }
 

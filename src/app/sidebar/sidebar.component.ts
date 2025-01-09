@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DrawerModule } from 'primeng/drawer';
 import { ButtonModule } from 'primeng/button';
+import { ThemeService } from '../Services/theme.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,4 +11,7 @@ import { ButtonModule } from 'primeng/button';
 })
 export class SidebarComponent {
 	visible: boolean = false;
+	themes = inject(ThemeService);
+
+
 }

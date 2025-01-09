@@ -1,10 +1,20 @@
 <p-drawer [(visible)]="visible" header="Drawer">
     <div class="flex align-items-center justify-content-between gap-3 mb-3">
-		<button (click)="themes.switchTheme();"
+		<button (click)="themes.switchTheme(mat);"
 				pTooltip="Arya blue"
 				class="bg-transparent border-1 cursor-pointer p-2 w-3 flex align-items-center justify-content-center transition-all transition-duration-200 hover:border-500 surface-border"
 				style="border-radius: 30px;"
-				>a
+				>Material
+				<span class="block h-1rem w-full" style="border-radius: 30px; background: linear-gradient(180deg, #121212 0%, #2a2a2a 100%);" >
+
+		</span>
+	</button>
+
+	<button (click)="themes.switchTheme(aura);"
+				pTooltip="Arya blue"
+				class="bg-transparent border-1 cursor-pointer p-2 w-3 flex align-items-center justify-content-center transition-all transition-duration-200 hover:border-500 surface-border"
+				style="border-radius: 30px;"
+				>Aura
 				<span class="block h-1rem w-full" style="border-radius: 30px; background: linear-gradient(180deg, #121212 0%, #2a2a2a 100%);" >
 
 		</span>

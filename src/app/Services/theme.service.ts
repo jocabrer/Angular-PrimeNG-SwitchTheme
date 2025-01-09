@@ -1,7 +1,8 @@
 import { computed, inject, Inject, Injectable, signal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { PrimeNG } from 'primeng/config';
-import Material from '@primeng/themes/material';
+import { MaterialBaseDesignTokens } from '@primeng/themes/material/base';
+import { Preset } from '@primeng/themes/types';
 
 /**
  * Service to switch the theme of the application
@@ -25,11 +26,11 @@ export class ThemeService {
      * Switch the theme of the application
      * @param theme Theme to switch to
      */
-    switchTheme() {
+    switchTheme(t: Preset<MaterialBaseDesignTokens>) {
         this.primeng.setThemeConfig(
             {
                 theme: {
-                    preset: Material,
+                    preset: t,
                 }
             }
         );

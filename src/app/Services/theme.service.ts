@@ -13,20 +13,21 @@ import { Preset } from '@primeng/themes/types';
 export class ThemeService {
 
 	primeng = inject( PrimeNG );
-	private _themeName = signal<string>( '' );
-	public themeName =  computed( () => this._themeName() );
+    private _themeSelected = signal<Preset<MaterialBaseDesignTokens>>({} as Preset<MaterialBaseDesignTokens>);
+	public themeSelected =  computed( () => this._themeSelected() );
 
     /**
      * Constructor of the service
-     * @param document Inject the document object to access the DOM
-     */
-    constructor(@Inject(DOCUMENT) private document: Document) {}
+    */
+    constructor() {}
 
     /**
      * Switch the theme of the application
      * @param theme Theme to switch to
      */
     switchTheme(t: Preset<MaterialBaseDesignTokens>) {
+		this._themeSelected.set( t );
+		console.log( t );
         this.primeng.setThemeConfig(
             {
                 theme: {

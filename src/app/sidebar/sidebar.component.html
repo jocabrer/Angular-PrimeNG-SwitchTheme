@@ -1,24 +1,12 @@
-<p-drawer [(visible)]="visible" header="Drawer">
-    <div class="flex align-items-center justify-content-between gap-3 mb-3">
-		<button (click)="themes.switchTheme(mat);"
-				pTooltip="Arya blue"
-				class="bg-transparent border-1 cursor-pointer p-2 w-3 flex align-items-center justify-content-center transition-all transition-duration-200 hover:border-500 surface-border"
-				style="border-radius: 30px;"
-				>Material
-				<span class="block h-1rem w-full" style="border-radius: 30px; background: linear-gradient(180deg, #121212 0%, #2a2a2a 100%);" >
-
-		</span>
-	</button>
-
-	<button (click)="themes.switchTheme(aura);"
-				pTooltip="Arya blue"
-				class="bg-transparent border-1 cursor-pointer p-2 w-3 flex align-items-center justify-content-center transition-all transition-duration-200 hover:border-500 surface-border"
-				style="border-radius: 30px;"
-				>Aura
-				<span class="block h-1rem w-full" style="border-radius: 30px; background: linear-gradient(180deg, #121212 0%, #2a2a2a 100%);" >
-
-		</span>
-	</button>
-	</div>
+<p-drawer [(visible)]="visible" header="Themes">
+	<div class="flex items-start justify-between gap-3">
+        <button (click)="themes.switchTheme(mat);"  pTooltip="Material Theme" class="mr-2" pButton>Material</button>
+        <button (click)="themes.switchTheme(aura);" pTooltip="Aura Theme" class="mr-2"  pButton>Aura</button>
+        <button (click)="themes.switchTheme(lara);" pTooltip="lara Theme" class="mr-2"  pButton>Lara</button>
+        <button (click)="themes.switchTheme(nora);" pTooltip="Nora Theme"  pButton>Nora</button>
+    </div>
 </p-drawer>
 <p-button (click)="visible = true" icon="pi pi-arrow-right" />
+<h1 class="text-3xl font-bold text-center">
+    Angular + PrimenNG + TailwindCSS v19
+  </h1>

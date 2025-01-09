@@ -11,4 +11,4 @@ A clean and modern starter project using Angular 19, PrimeNG 19, and TailwindCSS
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/primeng-tailwind-template.git](https://github.com/jocabrer/Angular-PrimeNG-SwitchTheme/)
+   git clone https://github.com/jocabrer/Angular-PrimeNG-SwitchTheme/
